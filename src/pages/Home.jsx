@@ -24,13 +24,13 @@ export default function SimpleSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  let grid = [
+  let grid2 = [
     {
       id: 1,
       img: leftTop,
       text: "Interal Black Doors",
-      collg: "2",
-      rowlg: "2",
+      col: "2",
+      row: "2",
     },
     {
       id: 2,
@@ -127,7 +127,7 @@ export default function SimpleSlider() {
       col: "3",
       row: "1",
     },
-  ];
+  ]
   const card = [
     {
       id: 1,
@@ -173,7 +173,7 @@ export default function SimpleSlider() {
           Get Inspired
         </h1>
         <div className="lg:grid hidden grid-cols-5 grid-rows-3 gap-x-8 gap-y-8 px-32">
-        {grid.map((element) => {
+        {grid2.map((element) => {
             return (
               <div
                 key={element.id}
