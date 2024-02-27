@@ -1,16 +1,19 @@
 import logo from "../img/logo.jpg";
 import { useState } from "react";
-
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const li = "hover:text-blue-700 hover:scale-[1.1] transition";
   const hover_p = "hover:text-blue-800";
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
+  };
   return (
-    <>
-      <header className="flex items-center justify-between py-4 px-8 w-full md:px-36">
+    <div >
+      <header className="flex items-center justify-between py-4 px-8 w-full md:px-36 z-30">
         <div className="flex gap-3 h-[100%] items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,16 +32,23 @@ const Header = () => {
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           </svg>
-
-          <img
-            src={logo}
-            alt=""
-            className="hidden md:block w-[110px] h-[75px]"
-          />
+          <Link to={"/"}>
+            <img
+              src={logo}
+              alt=""
+              className="hidden md:block w-[110px] h-[75px]"
+            />
+          </Link>
         </div>
         <div className="hidden md:block">
-                    <div className="flex border-b-2 border-b-blue-600 w-[400px] px-2 justify-between">
-            <input type="text" placeholder="Search..." className="outline-none w-full"/>
+          <div className="flex border-b-2 border-b-blue-600 w-[400px] px-2 justify-between">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="outline-none w-full"
+              onChange={handleSearch}
+              value={search}
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -53,10 +63,10 @@ const Header = () => {
                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
               />
             </svg>
-            </div>
-            </div>
+          </div>
+        </div>
         <ul className="flex items-center gap-4">
-          <li className="border-b-2 border-blue-600 md:hidden flex">
+          <li className="z-50 border-b-2 border-blue-600 md:hidden flex">
             <input
               type="text"
               className="outline-none "
@@ -77,7 +87,7 @@ const Header = () => {
               />
             </svg>
           </li>
-          {/* <li className="hidden md:block">
+          {/* <li className="z-50 hidden md:block">
             <div className="flex">
             <input type="text" placeholder="Search..."/>
             <svg
@@ -96,7 +106,7 @@ const Header = () => {
             </svg>
             </div>
           </li> */}
-          <li className="items-center flex flex-col ">
+          <li className="z-50 items-center flex flex-col ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -113,7 +123,7 @@ const Header = () => {
             </svg>
             <span className="hidden md:block">Account</span>
           </li>
-          <li className="items-center flex flex-col">
+          <li className="z-50 items-center flex flex-col">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -132,156 +142,156 @@ const Header = () => {
           </li>
         </ul>
       </header>
-      <nav id="menu" className="bg-gray-100 text-gray-900 hidden lg:block">
+      <nav id="menu" className="bg-gray-100 text-gray-900 hidden lg:block z-5">
         <ul className="grid grid-cols-3 lg:grid-cols-9 py-2 px-12">
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50`}>
             Interal Doors
-            <div className="absolute bg-white hidden group-hover:block text-gray-900 w-[91vw] px-8 ml-[-34px]">
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900 w-[90vw] px-8 ml-[-34px]">
               <ul className="grid grid-cols-4 pt-3">
-                <li className="flex flex-col gap-5">
-                <p className={hover_p}>Suitable for Trimming up to 32mm</p>
-                <p className={hover_p}>Internal Oak Doors</p>
-                <p className={hover_p}>Internal Gray Doors</p>
-                <p className={hover_p}>Internal White Primed Doors</p>
-                <p className={hover_p}>Internal White Prefinished Doors</p>
-                <p className={hover_p}>Internal Laminate Doors</p>
-                <p className={hover_p}>Sales Deals</p>
+                <li className="z-50 flex flex-col gap-5">
+                  <p className={hover_p}>Suitable for Trimming up to 32mm</p>
+                  <p className={hover_p}>Internal Oak Doors</p>
+                  <p className={hover_p}>Internal Gray Doors</p>
+                  <p className={hover_p}>Internal White Primed Doors</p>
+                  <p className={hover_p}>Internal White Prefinished Doors</p>
+                  <p className={hover_p}>Internal Laminate Doors</p>
+                  <p className={hover_p}>Sales Deals</p>
                 </li>
-                <li className="flex flex-col gap-5">
-                <p className={hover_p}>LPD Doors</p>
-                <p className={hover_p}>Internal Walnut Doors</p>
-                <p className={hover_p}>Black Internal Doors</p>
-                <p className={hover_p}>Internal Doors Special Offers</p>
-                <p className={hover_p}>Acoustic Panel Pre finished</p>
-                <p className={hover_p}>Internal Industrial Desing Doors</p>
-                <p className={hover_p}>Internal Doors - Colors</p>
+                <li className="z-50 flex flex-col gap-5">
+                  <p className={hover_p}>LPD Doors</p>
+                  <p className={hover_p}>Internal Walnut Doors</p>
+                  <p className={hover_p}>Black Internal Doors</p>
+                  <p className={hover_p}>Internal Doors Special Offers</p>
+                  <p className={hover_p}>Acoustic Panel Pre finished</p>
+                  <p className={hover_p}>Internal Industrial Desing Doors</p>
+                  <p className={hover_p}>Internal Doors - Colors</p>
                 </li>
-                <li className="flex flex-col gap-5">
-                <p className={hover_p}>Cheap Internal Doors</p>
-                <p className={hover_p}>Solid Oak Internal Doors</p>
-                <p className={hover_p}>Internal Glazed Doors</p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                <li className="z-50 flex flex-col gap-5">
+                  <p className={hover_p}>Cheap Internal Doors</p>
+                  <p className={hover_p}>Solid Oak Internal Doors</p>
+                  <p className={hover_p}>Internal Glazed Doors</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
-                <li className="flex flex-col gap-5">
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                <li className="z-50 flex flex-col gap-5">
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
               </ul>
             </div>
           </li>
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50 `}>
             Fire Doors
-            <div className="absolute bg-white hidden group-hover:block text-gray-900">
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
+              <ul className="z-50 ">
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
               </ul>
             </div>
           </li>
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50 `}>
             Room Dividers
-            <div className="absolute bg-white hidden group-hover:block text-gray-900">
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
               </ul>
             </div>
           </li>
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50 `}>
             Exteral Doors
-            <div className="absolute bg-white hidden group-hover:block text-gray-900">
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
               <ul>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
               </ul>
             </div>
           </li>
           <li className={`${li}`}>Pocket Doors</li>
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50 `}>
             Architraves
-            <div className="absolute bg-white hidden group-hover:block text-gray-900">
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>text</li>
+                <li>text</li>
+                <li>text</li>
               </ul>
             </div>
           </li>
           <li className={`${li}`}>French Doors</li>
-          <li className={`group ${li}`}>
+          <li className={`group ${li} z-50 `}>
             Ironmongery
-            <div className="absolute bg-white hidden group-hover:block text-gray-900">
+            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
               <ul>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
                 <li>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
-                <p className={hover_p}></p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
+                  <p className={hover_p}>text</p>
                 </li>
               </ul>
             </div>
@@ -290,39 +300,21 @@ const Header = () => {
         </ul>
       </nav>
       {isMenuOpen && (
-        <nav className="bg-gray-100 text-gray-900">
+        <nav className="bg-gray-100 text-gray-900 z-5">
           <ul className="grid grid-cols-3 py-2 px-5 ">
-            <li className={`group ${li} `}>
-              Interal Doors
-            </li>
-            <li className={`group ${li} `}>
-              Fire Doors
-            </li>
-            <li className={`group ${li} `}>
-              Room Dividers
-            </li>
-            <li className={`group ${li} `}>
-              Exteral Doors
-            </li>
-            <li className={`group ${li} `}>
-              Pocket Doors
-            </li>
-            <li className={`group ${li} `}>
-              Architraves
-            </li>
-            <li className={`group ${li} `}>
-              French Doors
-            </li>
-            <li className={`group ${li} `}>
-              Ironmongery
-            </li>
-            <li className={`group ${li} `}>
-              Spray Finishing
-            </li>
+            <li className={`group ${li} `}>Interal Doors</li>
+            <li className={`group ${li} `}>Fire Doors</li>
+            <li className={`group ${li} `}>Room Dividers</li>
+            <li className={`group ${li} `}>Exteral Doors</li>
+            <li className={`group ${li} `}>Pocket Doors</li>
+            <li className={`group ${li} `}>Architraves</li>
+            <li className={`group ${li} `}>French Doors</li>
+            <li className={`group ${li} `}>Ironmongery</li>
+            <li className={`group ${li} `}>Spray Finishing</li>
           </ul>
         </nav>
       )}
-    </>
+    </div>
   );
 };
 
