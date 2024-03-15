@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
-const Arrow = () => {
+const Arrow = ({text}) => {
   return (
     <>
       <Btn>
-        <button class="learn-more">
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
+        <button className="learn-more">
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
           </span>
-          <span class="button-text">Learn More</span>
+          <span className="button-text">{text}</span>
         </button>
       </Btn>
     </>
   );
 };
 
-const Btn = styled.button`
+const Btn = styled.div`
  button {
  position: relative;
  display: inline-block;
@@ -25,7 +25,8 @@ const Btn = styled.button`
  vertical-align: middle;
  text-decoration: none;
  background: transparent;
- padding: 0;
+ padding-left: 10px;
+ padding-right: 10px;
  font-size: inherit;
  font-family: inherit;
 }

@@ -10,7 +10,7 @@ const Header = () => {
 
   const handleSearch = (event) => {
     setSearch(event.target.value);
-  };
+  }
   return (
     <div >
       <header className="flex items-center justify-between py-4 px-8 w-full md:px-36 z-30">
@@ -145,11 +145,15 @@ const Header = () => {
       <nav id="menu" className="bg-gray-100 text-gray-900 hidden lg:block z-5">
         <ul className="grid grid-cols-3 lg:grid-cols-9 py-2 px-12">
           <li className={`group ${li} z-50`}>
-            Interal Doors
+            <Link to={`/page/1`}>
+              Interal Doors
+            </Link>
             <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900 w-[90vw] px-8 ml-[-34px]">
-              <ul className="grid grid-cols-4 pt-3">
-                <li className="z-50 flex flex-col gap-5">
-                  <p className={hover_p}>Suitable for Trimming up to 32mm</p>
+              <ul className="grid grid-cols-4 py-3">
+                <li className="z-50 flex flex-col gap-2">
+                  <p className={hover_p}>
+                  Suitable for Trimming up to 32mm
+                  </p>
                   <p className={hover_p}>Internal Oak Doors</p>
                   <p className={hover_p}>Internal Gray Doors</p>
                   <p className={hover_p}>Internal White Primed Doors</p>
@@ -157,7 +161,7 @@ const Header = () => {
                   <p className={hover_p}>Internal Laminate Doors</p>
                   <p className={hover_p}>Sales Deals</p>
                 </li>
-                <li className="z-50 flex flex-col gap-5">
+                <li className="z-50 flex flex-col gap-2">
                   <p className={hover_p}>LPD Doors</p>
                   <p className={hover_p}>Internal Walnut Doors</p>
                   <p className={hover_p}>Black Internal Doors</p>
@@ -166,7 +170,7 @@ const Header = () => {
                   <p className={hover_p}>Internal Industrial Desing Doors</p>
                   <p className={hover_p}>Internal Doors - Colors</p>
                 </li>
-                <li className="z-50 flex flex-col gap-5">
+                <li className="z-50 flex flex-col gap-2">
                   <p className={hover_p}>Cheap Internal Doors</p>
                   <p className={hover_p}>Solid Oak Internal Doors</p>
                   <p className={hover_p}>Internal Glazed Doors</p>
@@ -175,7 +179,7 @@ const Header = () => {
                   <p className={hover_p}>text</p>
                   <p className={hover_p}>text</p>
                 </li>
-                <li className="z-50 flex flex-col gap-5">
+                <li className="z-50 flex flex-col gap-2">
                   <p className={hover_p}>text</p>
                   <p className={hover_p}>text</p>
                   <p className={hover_p}>text</p>
@@ -188,40 +192,46 @@ const Header = () => {
             </div>
           </li>
           <li className={`group ${li} z-50 `}>
+            <Link to={'/page/2'}>
             Fire Doors
-            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
-              <ul className="z-50 ">
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block z-50 w-[30vw] text-gray-900">
+              <ul className="z-50 flex flex-col gap-2 pl-4 py-2">
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
               </ul>
             </div>
           </li>
           <li className={`group ${li} z-50 `}>
+            <Link to={'/page/3'}>
             Room Dividers
-            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
-              <ul>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
-                <li>text</li>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block z-50 w-[30vw] text-gray-900">
+              <ul className="z-50 flex flex-col gap-2 pl-4 py-2" >
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
+                <li className={hover_p}>text</li>
               </ul>
             </div>
           </li>
           <li className={`group ${li} z-50 `}>
+            <Link to={'/page/4'}>
             Exteral Doors
-            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
-              <ul>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block z-50  w-[90vw] ml-[-470px] text-gray-900">
+              <ul className="grid grid-cols-4 px-12 py-2">
                 <li>
                   <p className={hover_p}>text</p>
                   <p className={hover_p}>text</p>
@@ -249,22 +259,34 @@ const Header = () => {
               </ul>
             </div>
           </li>
-          <li className={`${li}`}>Pocket Doors</li>
+          <li className={`${li}`}>
+            <Link to={'/page/5'}>
+          Pocket Doors
+          </Link>
+          </li>
           <li className={`group ${li} z-50 `}>
+            <Link to={'/page/6'}>
             Architraves
-            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
-              <ul>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block z-50 w-full text-gray-900">
+              <ul className="z-50 flex flex-col gap-2 pl-4 py-2">
                 <li>text</li>
                 <li>text</li>
                 <li>text</li>
               </ul>
             </div>
           </li>
-          <li className={`${li}`}>French Doors</li>
+          <li className={`${li}`}>
+            <Link to={'/page/7'}>
+          French Doors
+          </Link>
+          </li>
           <li className={`group ${li} z-50 `}>
+            <Link to={'/page/8'}>
             Ironmongery
-            <div className="absolute bg-white hidden group-hover:block z-50  text-gray-900">
-              <ul>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block z-50  w-[90vw] ml-[-1050px] text-gray-900">
+              <ul className="z-50 grid grid-cols-4 gap-2 px-12 py-2">
                 <li>
                   <p className={hover_p}>text</p>
                   <p className={hover_p}>text</p>
@@ -296,20 +318,41 @@ const Header = () => {
               </ul>
             </div>
           </li>
-          <li className={`${li}`}>Spray Finishing</li>
+          <li className={`${li}`}>
+          Spray Finishing
+          </li>
         </ul>
       </nav>
       {isMenuOpen && (
         <nav className="bg-gray-100 text-gray-900 z-5">
+          <Link to={'/'}>
+            <p className="text-[22px] w-fit px-5 hover:text-blue-700 hover:scale-[1.1] transition">Home</p>
+            </Link>
           <ul className="grid grid-cols-3 py-2 px-5 ">
+          <Link to={'/page/1'}>
             <li className={`group ${li} `}>Interal Doors</li>
+            </Link>
+            <Link to={'/page/2'}>
             <li className={`group ${li} `}>Fire Doors</li>
+            </Link>
+            <Link to={'/page/3'}>
             <li className={`group ${li} `}>Room Dividers</li>
+            </Link>
+            <Link to={'/page/4'}>
             <li className={`group ${li} `}>Exteral Doors</li>
+            </Link>
+            <Link to={'/page/5'}>
             <li className={`group ${li} `}>Pocket Doors</li>
+            </Link>
+            <Link to={'/page/6'}>
             <li className={`group ${li} `}>Architraves</li>
+            </Link>
+            <Link to={'/page/7'}>
             <li className={`group ${li} `}>French Doors</li>
+            </Link>
+            <Link to={'/page/8'}>
             <li className={`group ${li} `}>Ironmongery</li>
+            </Link>
             <li className={`group ${li} `}>Spray Finishing</li>
           </ul>
         </nav>
