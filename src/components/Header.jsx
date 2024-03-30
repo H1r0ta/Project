@@ -1,16 +1,12 @@
 import logo from "../img/logo.jpg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./Searchbar";
 
 const Header = () => {
   const li = "hover:text-blue-700 hover:scale-[1.1] transition";
   const hover_p = "hover:text-blue-800";
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [search, setSearch] = useState("");
-
-  const handleSearch = (event) => {
-    setSearch(event.target.value);
-  }
   return (
     <div >
       <header className="flex items-center justify-between py-4 px-8 w-full md:px-36 z-30">
@@ -41,29 +37,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden md:block">
-          <div className="flex border-b-2 border-b-blue-600 w-[400px] px-2 justify-between">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="outline-none w-full"
-              onChange={handleSearch}
-              value={search}
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-8 h-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-          </div>
+        <SearchBar placeholder={'Search Movie...'} data={MovieData}/>
         </div>
         <ul className="flex items-center gap-4">
           <li className="z-50 border-b-2 border-blue-600 md:hidden flex">
@@ -318,9 +292,11 @@ const Header = () => {
               </ul>
             </div>
           </li>
+          <Link to={'/spray-finishes'}>
           <li className={`${li}`}>
           Spray Finishing
           </li>
+          </Link>
         </ul>
       </nav>
       {isMenuOpen && (
@@ -353,7 +329,9 @@ const Header = () => {
             <Link to={'/page/8'}>
             <li className={`group ${li} `}>Ironmongery</li>
             </Link>
+            <Link to={'/spray-finishes'}>
             <li className={`group ${li} `}>Spray Finishing</li>
+            </Link>
           </ul>
         </nav>
       )}

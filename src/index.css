@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @keyframes spin-once {
     to {
       transform: rotate(360deg);
@@ -21,4 +22,6 @@
   .animate-spin-reverse:hover {
     animation: spin-once 300ms linear forwards, spin-once-reverse 300ms linear backwards;
   }
+  
+
   
