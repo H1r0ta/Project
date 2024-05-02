@@ -492,7 +492,7 @@ const Page2 = () => {
                   ))}
                 </div>
               </div>
-              <label>NickName</label>
+              <label>Nick Name</label>
               <input type="text" className="w-[40%] border-2" />
               <label>Summary</label>
               <input type="text" className="w-[40%] border-2" />

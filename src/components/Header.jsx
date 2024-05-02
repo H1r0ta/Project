@@ -7,6 +7,99 @@ const Header = () => {
   const li = "hover:text-blue-700 hover:scale-[1.1] transition";
   const hover_p = "hover:text-blue-800";
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const DoorData = [
+    {
+      id: 1,
+      title: 'Damsel',
+      link:''
+},
+    {
+      id: 2,
+      title: 'Orion and the Dark',
+      link:''
+},
+    {
+      id: 3,
+      title: 'Lift',
+      link:''
+},
+    {
+      id: 4,
+      title: 'Sixty Minutes',
+      link:''
+},
+    {
+      id: 5,
+      title: 'Badland Hunters',
+      link:''
+},
+    {
+      id: 6,
+      title: 'Code 8: Part II',
+      link:''
+},
+    {
+      id: 7,
+      title: 'LightsOut',
+      link:''
+},
+    {
+      id: 8,
+      title: 'Checkmate',
+      link:''
+},
+    {
+      id: 9,
+      title: 'Bitconned',
+      link:''
+},
+    {
+      id: 10,
+      title: 'Five Blind Dates',
+      link:''
+},
+    {
+      id: 11,
+      title: 'This Is Me... Now',
+      link:''
+},
+    {
+      id: 12,
+      title: 'Spider Man: Homecoming',
+      link:''
+},
+    {
+      id: 13,
+      title: 'Spider Man: No Way Home',
+      link:'/page/card/6'
+},
+    {
+      id: 14,
+      title: 'Amazing Spiderman',
+      link:'/page/card/2'
+},
+    {
+      id: 15,
+      title: 'Spider Man(2002)',
+      link:'/page/card/5'
+},
+    {
+      id: 16,
+      title: 'Spider Man 2',
+      link:'/page/card/4'
+},
+    {
+      id: 17,
+      title: 'The Heartbreak Agency',
+      link:'/page/card/3'
+},
+    {
+      id: 18,
+      title: 'My Name Is Loh Kiwan',
+      link:'/page/card/1'
+}
+  ]
+
   return (
     <div >
       <header className="flex items-center justify-between py-4 px-8 w-full md:px-36 z-30">
@@ -37,7 +130,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden md:block">
-        <SearchBar placeholder={'Search Movie...'} data={MovieData}/>
+        <SearchBar placeholder={'Search Door...'} data={DoorData}/>
         </div>
         <ul className="flex items-center gap-4">
           <li className="z-50 border-b-2 border-blue-600 md:hidden flex">

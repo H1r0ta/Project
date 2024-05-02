@@ -20,7 +20,7 @@ const SearchBar = ({ placeholder, data }) => {
   };
   return (
     <>
-      <div className=" pt-40">
+      <div className="">
         {/* input */}
         <div className="flex border-b-2 border-b-blue-600 w-[400px] px-2 justify-between">
             <input
@@ -48,7 +48,7 @@ const SearchBar = ({ placeholder, data }) => {
 
         {/* data */}
         {filteredData.length != 0 && (
-          <div className="overflow-hidden overflow-y-auto w-[300px] h-[200px] bg-white flex flex-col gap-2">
+          <div className="overflow-hidden overflow-y-auto w-[300px] h-[200px] bg-white flex flex-col gap-2 absolute z-[60]">
             {filteredData.slice(0, 15).map((value) => {
               return (
                 <a className="w-full h-10" key={value.id} href={value.link} target="_blank">
