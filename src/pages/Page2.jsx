@@ -116,12 +116,12 @@ const Page2 = () => {
     <>
       <Header />
       <main>
-        <div className="flex">
+        <div className="md:flex my-4">
           <div className="flex justify-center pt-16">
             <img src={card.img} className="h-[70%]" alt="" />
           </div>
-          <div className="flex flex-col pt-16">
-            <h1 className="text-[32px] w-[60%] mb-4 font-bold text-blue-950">
+          <div className="flex flex-col pt-16 px-6">
+            <h1 className="text-[32px] md:w-[60%] mb-4 font-bold text-blue-950">
               {card.text}
             </h1>
             <p className="text-[20px] font-[400px]">Incl: ${card.price}</p>
@@ -136,27 +136,27 @@ const Page2 = () => {
               (44mm){" "}
             </p>
             <label className="text-[20px] font-semibold">*Size:</label>
-            <select className="w-[60%] outline-none border-2 py-2 focus:border-blue-400 mb-4">
+            <select className="md:w-[60%] outline-none border-2 py-2 focus:border-blue-400 mb-4">
               <option>--Please Select--</option>
               <option>1981 x 686 x 44mm (27")</option>
               <option>1981 x 762 x 44mm (30")</option>
               <option>2032 x 813 x 44mm (32")</option>
               <option>1981 x 838 x 44mm (33")</option>
             </select>
-            <div className="w-[60%] border-2 flex justify-between px-1 py-2 focus-within:border-blue-400">
+            <div className="md:w-[60%] border-2 flex justify-between px-1 py-2 focus-within:border-blue-400">
               <p>Qty</p>
               <input type="number" className="outline-none w-[80%]" />
             </div>
 
-            <button className="w-[60%] bg-gray-300 text-[18px] py-4 my-4">
+            <button className="md:w-[60%] bg-gray-300 text-[18px] py-4 my-4">
               Add to Wish list
             </button>
-            <button className="w-[60%] bg-blue-600 text-[18px] py-4 text-white ">
+            <button className="md:w-[60%] bg-blue-600 text-[18px] py-4 text-white ">
               Add to Card
             </button>
           </div>
         </div>
-        <div className="flex px-24">
+        <div className="md:flex px-24 hidden">
           <button
             className={`px-4 py-2 focus:outline-none ${
               activeTab === "tab1"
@@ -218,7 +218,7 @@ const Page2 = () => {
             Reviews
           </button>
         </div>
-        <div className="mt-4 mb-12 px-28">
+        <div className="md:block hidden mt-4 mb-12 px-28">
           <div className={`${activeTab === "tab1" ? "block" : "hidden"}`}>
             <div>
               <p className="mb-2 font-[400px]">

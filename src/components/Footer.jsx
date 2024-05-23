@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <>
-      <div className="bg-blue-900 text-white md:flex px-4 md:px-32 py-14">
+    <div className="bg-gray-200">
+      <div className="bg-blue-900 text-white md:flex px-4 md:px-32 py-14 hidden">
         <div className="md:w-[50%]">
           <h1 className="md:text-[42px] text-[26px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
             NEWSLETTER
@@ -9,10 +9,10 @@ export const Footer = () => {
           <p>Subscribe to our newsletter for product updates and offers.</p>
         </div>
         <div className="md:w-[50%]">
-          <div className="w-[80%] pl-4 bg-white bg-opacity-40 flex justify-between">
+          <div className="pl-4 md:pl-4 bg-white bg-opacity-40 flex justify-between">
             <input
               type="text"
-              placeholder="Enter Your Email Here"
+              placeholder="Enter Your Email"
               className="outline-none bg-transparent placeholder-gray-200"
             />
             <button className="bg-blue-600 py-6 px-8 hover:bg-white hover:text-blue-600">
@@ -238,6 +238,6 @@ export const Footer = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };

@@ -97,6 +97,22 @@ let Home = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   const settings2 = {
     dots: true,
@@ -117,6 +133,22 @@ let Home = () => {
         }`}
       ></div>
     ),
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   const settings3 = {
@@ -138,6 +170,22 @@ let Home = () => {
         }`}
       ></div>
     ),
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   let grid1 = [
@@ -406,10 +454,10 @@ let Home = () => {
                   key={el.id}
                 >
                   <img src={el.img} alt="" />
-                  <p className="mx-4 text-xl font-bold text-blue-950 hover:text-blue-700">
+                  <p className="mx-4 md:text-xl sm:text-sm font-bold text-blue-950 hover:text-blue-700">
                     {el.text}
                   </p>
-                  <p className="flex flex-col text-black font-semibold">
+                  <p className="flex flex-col text-xs md:text-base text-black font-semibold">
                     Incl. VAT: ${el.price}
                     <span className="text-gray-400">
                       Excl. VAT: ${el.salePrice}
@@ -438,8 +486,8 @@ let Home = () => {
           </Slider>
         </div>
       </div>
-      <div className="flex text-blue-950 py-4">
-        <div className="w-[50%] px-32 gap-8 flex flex-col">
+      <div className="flex flex-col lg:flex-row text-blue-950 py-4">
+        <div className="lg:w-[50%] px-16 lg:px-32 gap-8 flex flex-col">
           <h1 className="text-[45px] font-bold">
             About Oakwood Doors & Spray Finishes Ltd
           </h1>
@@ -476,7 +524,7 @@ let Home = () => {
             </svg>
           </button>
         </div>
-        <div className="w-[50%]">
+        <div className=" lg:w-[50%] px-16 lg:px-0 py-4 lg:py-0">
           <img src={img} alt="" />
         </div>
       </div>
@@ -485,7 +533,7 @@ let Home = () => {
         <Slider {...settings2}>
           {card3.map((el) => {
             return (
-              <div className="card max-w-fit ml-20 px-4 py-4 mb-8 flex flex-col text-center bg-white rounded-3xl hover:shadow-lg duration-700" key={el.id}>
+              <div className="card max-w-fit md:ml-20 px-4 py-4 mb-8 flex flex-col text-center bg-white rounded-3xl hover:shadow-lg duration-700" key={el.id}>
                                 <h1 className="text-lg">{el.text}</h1>
                 <div className="stars text-yellow-400 my-4 flex mx-auto max-w-fit">
                   <svg
@@ -561,7 +609,7 @@ let Home = () => {
       <Slider {...settings3}>
         {card4.map((el) => {
           return(
-            <div className="card max-w-[70%] ml-28 px-8 py-4 mb-8 relative flex flex-col text-center bg-gray-200 hover:shadow-2xl duration-[400ms]" key={el.id}>
+            <div className="card lg:max-w-[70%] lg:ml-28 px-8 py-4 mb-8 relative flex flex-col text-center bg-gray-200 hover:shadow-2xl duration-[400ms]" key={el.id}>
               <img src={el.img} className="h-[200px] w-[200px] mx-auto z-0" alt="" />
               <div className="w-12 text-white z-50 mt-[-40px] bg-blue-500 relative">14 Mar</div>
               <h1 className="text-start my-4">{el.text}</h1>

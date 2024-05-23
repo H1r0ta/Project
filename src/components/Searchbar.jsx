@@ -36,7 +36,7 @@ const SearchBar = ({ placeholder, data }) => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-8 h-8"
+              className="w-7 h-7"
             >
               <path
                 strokeLinecap="round"

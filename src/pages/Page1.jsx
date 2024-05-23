@@ -676,12 +676,12 @@ const Page1 = () => {
       >
         <h1 className="text-[22px] md:text-[40px] font-bold">{page.title}</h1>
       </div>
-      <main className="px-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-8">
+      <main className="md:px-20 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-8">
           {page.cards.map((el) => {
             return (
               <div
-                className="card bg-white md:ml-14 mb-4 pb-4 md:max-w-[65%] flex flex-col hover:shadow-2xl scale-[1.01] text-center"
+                className="card bg-white md:ml-14 mb-8 md:mb-4 pb-4 md:max-w-[65%] flex flex-col hover:shadow-2xl scale-[1.01] text-center"
                 key={el.id}
               >
                 <div className="h-[80%] flex items-center justify-center">
@@ -728,13 +728,13 @@ const Page1 = () => {
           })}
         </div>
       </main>
-      <div className="py-4 px-20">
-        <p className="mb-2">{page.text}</p>
-        <p>{page.text2}</p>
+      <div className="py-4 px-4 md:px-20">
+        <p className="mb-2 text-[12px]">{page.text}</p>
+        <p className="text-[12px]">{page.text2}</p>
         {page.id === 1 ? (
           <>
             <h1 className="my-4">COLOURS</h1>
-            <p>
+            <p className="text-[12px]">
               Now offering spray finishing Colours on selected Internal Oak
               Untreated Doors & Internal white primed doors. With the colours
               range the skilled craftsmen handle the hard work for you. Spraying
@@ -747,7 +747,7 @@ const Page1 = () => {
               weeks.
             </p>
             <h1 className="my-4">BESPOKE INTERNAL DOORS</h1>
-            <p>
+            <p className="text-[12px]">
               We're excited to introduce Bespoke on a range of our Internal
               Doors. If you need a width or length you can't see in our
               collection then let us know. Contact us and let us know what
@@ -759,7 +759,7 @@ const Page1 = () => {
               white primed).{" "}
             </p>
             <h1 className="my-4">INTERNAL FIRE DOOR 60 MINUTE RANGE</h1>
-            <p>
+            <p className="text-[12px]">
               Here at Oakwood Doors we have introduced 60 Minute Internal Fire
               Doors on the most popular range in the Oak Collection of Internal
               Doors. Internal FIRE Door Oak Palermo FD60 & the Internal Fire
